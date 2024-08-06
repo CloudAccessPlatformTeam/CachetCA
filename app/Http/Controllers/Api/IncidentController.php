@@ -110,7 +110,8 @@ class IncidentController extends AbstractApiController
                 (bool) Binput::get('stickied', false),
                 Binput::get('occurred_at'),
                 Binput::get('template'),
-                Binput::get('vars', [])
+                Binput::get('vars', []),
+                Binput::get('meta', [])
             ));
         } catch (QueryException $e) {
             throw new BadRequestHttpException();
